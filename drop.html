@@ -1,0 +1,51 @@
+<html>
+    <title>Drop</title>
+    <head>
+
+    </head>
+    <style>
+        .container{
+            width:600px;
+            height:100vh;
+            border:solid brown 2px;
+            background-color: burlywood;
+        }
+        .center{
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .flex{
+            display: flex;
+        }.drop{
+            width:80px;
+            height: 80px;
+            background-color: blue;
+            transform: rotate(-45deg);
+            border-top-right-radius:0;
+            position:absolute;
+            top:30px;
+            right:620px;
+        }
+    </style>
+    <body>
+        <script>
+            window.onload=function()
+            {
+                let dropObj=document.querySelector(.drop)
+                let top=0;
+                function move()
+                {
+                    dropObj.style.top=`${top}px`
+                    top++;
+                }
+                setInterval(move,40)
+            }
+        </script>
+        <main class="flex center">
+            <div class="container">
+                <div class="drop"></div>
+            </div>
+        </main>
+    </body>
+</html>
