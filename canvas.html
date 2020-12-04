@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+</head>
+<body>
+    <canvas id="canvas" width="800px" height="800px"></canvas>
+    <script>
+    const canvas=document.getElementById('canvas');
+    const ctx= canvas.getContext('2d');
+    ctx.StrokeStyle='green';
+    ctx.strokeRect(60, 80, 50, 40);
+    ctx.strokeRect(200, 80, 50, 40);
+    ctx.strokeRect(130, 140, 50, 60);
+  //  ctx.fillRect(50, 50, 500, 500);
+  
+  ctx.beginPath();{
+   // ctx.moveTo(75, 500);
+    //ctx.lineTo(150, 200);
+    //ctx.lineTo(200, 50);
+    //ctx.fill();
+    ctx.arc(150,150,150,0,Math.PI*2,false);
+    //ctx.moveTo(60,50);
+   // ctx.arc(60,60,80,30,Math.PI,false);
+    ctx.stroke();
+  }
+    </script>
+</body>
+</html>
