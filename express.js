@@ -1,0 +1,367 @@
+const express = require('express')
+const app = express()
+const port = 5000
+
+app.get('/api', (req, res) => {
+  res.send(`
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <title>
+             done
+          </title>
+              <style>
+                 *{
+                    margin: 0;
+                    padding: 0;  
+                  }
+                  header
+                  {
+                      min-height: 50px;
+                  }
+                  .img
+                  {
+                      max-width: 100%;
+                  }
+                  .text-white
+                  {
+                      color: white;
+                  }
+  
+                  .flip-blue  
+                  {
+                      background-color:#2874f0;
+                  }
+                  .text-yellow
+                  {
+                      color: yellow;
+                  }
+          .col-08{
+            width:08%;
+          }
+          .col-09{
+            width:09%;
+            }
+          .col-10{
+            width: 10%;
+          }
+          .col-11{
+            width: 11%;
+            }
+          .col-15{
+            width: 15%;
+          }	
+          .col-20{
+            width: 20%;
+          }
+          .col-30{
+            width: 30%;
+          }
+          .col-35{
+            width: 35%;
+          }
+          .col-40{
+            width: 40%;
+          }
+          .col-50{
+            width: 50%;
+          }
+          .col-60{
+            width: 60%;
+          }
+          .col-70{
+            width: 70%;
+          }
+          .col-80{
+            width: 80%;
+          }
+          .col-85{
+            width:85%;
+          }
+          .col-90{
+            width: 90%;
+          }
+          .col-100{
+            width: 100%;
+          }
+          .col-15{
+            width:15%;
+          }
+                  .font-12
+                  {
+                      font-size: 12px;
+                  }
+                  .logo-container
+                  {
+                      padding: 10px ;
+                  }
+                  .right-align
+                  {
+                      margin-left: auto;
+                      margin-right: 0;
+                  }
+                  .search-container
+                  {
+                      display: block;
+                  }
+          .inline-block{
+          display:inline-block;
+          verical-align:bottom;
+          }
+          .img{
+          max-width:100%;
+          }
+          .bg-white{
+          background-color:white;
+          }
+          .text-blue{
+          color:blue;
+          }
+          .list-items{
+          list-style:none;
+          }
+        .back-box{
+          z-index:-20;
+          background:gray;
+          width:30px;
+          height:30px;
+          position:absolute;
+          transform-origin:center;
+          left:40%;
+          }
+          
+          .options{
+          top:5px;
+          transform:scale(1,0);
+          transition: all 1s ease-in-out;
+          }
+  
+          
+          .dropdown:hover > .options{
+          transform:scale(1);
+          }
+          .dropdown:hover > .back-box{
+          transform:rotate(45deg);
+          }
+          .dropdown{
+          position:relative;
+          cursor:pointer;
+          }
+          .list-box{
+          position:absolute;
+          
+          }
+          .explore{
+          style:none;
+          hover:underline;
+          }
+          .dropdown > h4::after{
+          content: "v";
+          padding:10px;
+          color:white;
+          }
+          .dropdown:hover > h4::after{
+          content: "^";
+          }
+          
+          .list-item{
+          padding:10px;
+          border-bottom:1px solid #aaaaaa;
+          }
+          .dropdown2 > h4::after{
+          content: "v";
+          padding:10px;
+          color:white;
+          }
+          .dropdown2:hover > h4::after{
+          content: "^";
+          }
+          .dropdown2{
+          position:relative;
+          cursor:pointer;
+          }
+  </style>
+  </head>
+    
+    
+    
+    <body>
+      <div class="container">
+      
+        <header class="flip-blue">
+        
+          <div class="logo-container inline-block col-20">
+          
+            <div class="logo-box col-30 right-align">
+            
+                          
+              <div class="main-logo-box">
+                              <img src="flipkart-plus_4ee2f9.png" class="img" alt="flipkart">
+              </div>
+                          
+              <div class="explore">
+                              <a href="home.html" class="text-white font-12 col-90"><i>Explore <span class="text-yellow">Plus</span></i></a>
+                              <img src="plus_b13a8b.png" class="img col-15" alt="Plus">
+              </div>
+               
+            </div>
+            
+          </div>
+              
+              <div class="search-container inline-block col-35 height:60px">
+                <input id="input" type="search" class="col-85" placeholder="search for products">
+                <button class="btn search-btn inline-block">search</button>
+              </div>
+              
+              
+            <div class="navigation-box inline-block col-40">
+          
+                <button class="btn login-btn inline-block col-30 dropdown">
+                  
+                  <h3>LOGIN</h3>
+                    <div class="back-box options">
+                    </div>
+                    <div class="options bg-white text-blue">
+                    
+                      <ul class="list-box" >
+                      
+                        <li class="list-items block"> 
+                        <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                New customer
+                              </div>
+                            </li>
+                        <li class="list-items block"> 
+                        <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                My Profile
+                              </div>
+                            </li>
+                        <li class="list-items block"> 
+                        <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-70 text-blue inline-block">
+                                Flipkart Plus Zone
+                              </div>
+                            </li>
+                        <li class="list-items block"> 
+                        <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                Orders
+                              </div>
+                            </li>
+                        <li class="list-items block"> 
+                        <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                Wishlist
+                              </div>
+                            </li>
+                        <li class="list-items block"> 
+                        <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                Rewards
+                              </div>
+                            </li>
+                        <li class="list-items block"> 
+                        <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                Gift Cards
+                              </div>
+                            </li>
+                      </ul>
+                    </div>
+                </button>
+                    
+                  <div class="dropdown inline-block col-30">
+                    <h4>MORE</h4>
+                    <div class="back-box options">
+                    </div>
+                      <div class="options bg-white text-blue">
+                      
+                          <ul class="list-box">
+                            <li class="list-items block">
+                              <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                Sign up
+                              </div>
+                            </li>
+                            <li class="list-items block">
+                            <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                Login
+                              </div>
+                            </li>
+                            <li class="list-items block">
+                            <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-80 text-blue inline-block">
+                                Notifications
+                              </div>
+                            </li>
+                            <li class="list-items block">
+                            <div class="list-icon col-10 inline-block">
+                                <img src="______" class="img">
+                              </div>
+                              <div class="col-70 text-blue inline-block">
+                                Customer care
+                              </div>
+                            </li>
+                          </ul>
+                      </div>
+                  </div>
+                    
+                      <div class="cart inline-block col-10">
+                        <div class="row">
+                          <div class="inline-block">
+                          <img src="svg.png" class="img">
+                          </div>
+                        </div>
+                      </div>
+                        <div class="inline-block col-20">
+                        <h4 align="left">CART</h4>
+                        </div>
+                    
+            </div>
+        </header>
+        
+          </div>
+      <div class="container2 bg-white">
+      <header class="menu dropdown top=10px">
+        <div class="electronics inline-block col-11"><h4 align="center">Electronics v</h4></div>
+          <div class="TVappliances inline-block col-11"><h4 align="center">TVs & Appliances v</h4></div>
+            <div class="Men inline-block col-08"><h4 align="center">Men v</h4></div>
+              <div class="women inline-block col-11"><h4 align="center">Women v</h4></div>
+                <div class="babykids inline-block col-11"><h4 align="center">Baby & Kids v</h4></div>
+                  <div class="homefurniture inline-block col-11"><h4 align="center">Home & Furniture v</h4></div>
+                    <div class="sports inline-block col-15"><h4 align="center">Sports, Books & More v</h4></div>
+                      <div class="flights inline-block col-9"><h4 align="center">Flights</h4></div>
+                        <div class="offerzone inline-block col-11"><h4 align="center">Offer Zone</h4>
+                        </div>
+                      
+      </header>				
+      </body>
+  </html>`)
+
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
