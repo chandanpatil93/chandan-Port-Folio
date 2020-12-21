@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobilesale</title>
+</head>
+<style>
+    
+    img{
+        height: 28vh;
+        width: 17%;
+    }
+    h1{
+        height: 200px;
+        width: 300px;
+        position: absolute;
+        left: 230px;
+        top: 0;
+    }
+    .rs{
+        position: absolute;
+        left: 550px;
+        top: 35px;  
+        text: bold;
+        color: gray;
+    }
+    .stock{
+        position: absolute;
+        left: 233px;
+        top: 70px;
+    }
+    .space-x-2{
+        position: absolute;
+        left: 225px;
+        top: 100px; 
+    }
+    .size{
+        position: absolute;
+        left: 550px;
+        top: 100px; 
+    }
+    .buy{
+        position: absolute;
+        left: 232px;
+        top: 135px;
+    }
+    .add{
+        position: absolute;
+        left: 330px;
+        top: 135px;
+    }
+    .btn{
+        position: absolute;
+        left: 550px;
+        top: 130px; 
+    }
+    .text{
+        position: absolute;
+        left: 232px;
+        top: 150px;
+    }
+</style>
+<body>
+    <div class="flex">
+        <div class="flex-none w-48 relative">
+          <img src="mobile1.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+        </div>
+        <form class="flex-auto p-6">
+          <div class="flex flex-wrap">
+            <h1 class="flex-auto text-xl font-semibold">
+              RedMI mobile
+            </h1>
+            <div class="rs text-xl font-semibold text-gray-500">
+              $200.00
+            </div>
+            <div class="stock w-full flex-none text-sm font-medium text-gray-500 mt-2">
+              In stock
+            </div>
+          </div>
+          <div class="flex items-baseline mt-4 mb-6">
+            <div class="space-x-2 flex">
+              <label>
+                <input class="w-9 h-9 flex items-center justify-center bg-gray-100 rounded-lg" name="size" type="radio" value="xs" checked>
+                red
+              </label>
+              <label>
+                <input class="w-9 h-9 flex items-center justify-center" name="size" type="radio" value="s">
+                blue
+              </label>
+              <label>
+                <input class="w-9 h-9 flex items-center justify-center" name="size" type="radio" value="m">
+                cyan
+              </label>
+              <label>
+                <input class="w-9 h-9 flex items-center justify-center" name="size" type="radio" value="l">
+                pink
+              </label>
+              <label>
+                <input class="w-9 h-9 flex items-center justify-center" name="size" type="radio" value="xl">
+                black
+              </label>
+            </div>
+            <div class=" size ml-auto text-sm text-gray-500 underline">Size Guide</div>
+          </div>
+          <div class="flex space-x-3 mb-4 text-sm font-medium">
+            <div class="flex-auto flex space-x-3">
+              <button class=" buy w-1/2 flex items-center justify-center rounded-md bg-black text-white" type="submit">Buy now</button>
+              <button class="add w-1/2 flex items-center justify-center rounded-md border border-gray-300" type="button">Add to bag</button>
+            </div>
+            <button class="btn flex-none flex items-center justify-center w-9 h-9 rounded-md text-gray-400 border border-gray-300" type="button" aria-label="like">
+              <svg width="20" height="20" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+              </svg>
+            </button>
+          </div>
+          <p class="text text-sm text-gray-500">
+            Free shipping on all continental US orders.
+          </p>
+        </form>
+      </div>
+</body>
+</html>
