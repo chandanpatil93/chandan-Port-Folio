@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+</head>
+<style>
+    .container{
+        height: 100vh;
+        width: 100%;
+    }
+    .flex{
+        display: flex;
+    }
+    .sideoptions{
+        height: 90vh;
+        width: 10%;
+    }
+    
+    .box1{
+        
+        height: 22vh;
+        width: 90%;
+        border: black solid 2px;
+    }
+    .box2{
+        
+        height: 22vh;
+        width: 90%;
+        border: black solid 2px;
+    }
+    .box3{
+        
+        height: 22vh;
+        width: 90%;
+        border: black solid 2px;
+    }
+    .box4{
+        
+        height: 23vh;
+        width: 90%;
+        border: black solid 2px;
+    }
+    img{
+        height: 22vh;
+        width: 90%;
+    }
+    .display{
+        
+        height: 90 vh;
+        width: 40%;
+        border: black solid 2px;
+    }
+    .box1:hover>display{
+        <img src: mobile1.jpg>
+    }
+    
+</style>
+
+<body>
+    <div class="container flex">
+        <div class="sideoptions">
+            <div class="box1 id=MyImage"><img src="mobile1.jpg"></div>
+            <div class="box2"><img src="mobile2.jpg"></div>
+            <div class="box3"><img src="mobile3.jpg"></div>
+            <div class="box4"><img src="mobile4.jpg"></div>
+        </div>
+        <div class="display" id="blank">
+           
+        </div>
+        <div class="content">
+            <h2></h2>
+        </div>
+    </div>
+    <script>
+        function MouseRollover(MyImage) {
+            MyImage.src = "mobile1.jpg";
+        }
+        function MouseOut(MyImage) {
+            MyImage.src = "blank";
+        }
+    </script>
+    
+
+
+</body>
+</html>
